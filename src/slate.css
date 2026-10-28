@@ -1,0 +1,88 @@
+/* "Slate": a calm modern dark theme layered over classic_theme/theme.css. */
+:root {
+  --bg: #0e1116; --panel: #161a22; --panel-2: #1c212b; --line: #2a303c; --line-soft: #222834;
+  --text: #e6e8ec; --muted: #9aa3b2; --faint: #6b7385;
+  --accent: #5b9dff; --accent-soft: rgba(91,157,255,.14); --gold: #e3b341; --good: #4cc38a; --bad: #f07178;
+  --radius: 10px;
+}
+body { background: var(--bg) !important; color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif; }
+#middle { background-image: none !important; background-color: var(--bg); }
+a { color: var(--accent); } a:hover { color: #8dbbff; }
+h1, h2, h3 { color: var(--text); font-weight: 600; }
+
+/* top navigation */
+.navigation, .chooser-nav-class { background: var(--panel) !important; border: 1px solid var(--line) !important; border-radius: 8px !important; box-shadow: none !important; }
+.navigation a, .chooser-nav-class a { color: var(--muted); }
+#header-navigation div:hover, #header-navigation-2nd-level div:hover, #header-navigation-3rd-level div:hover, #chooser-nav div:hover {
+  background: var(--accent-soft) !important; box-shadow: none !important; }
+#header-navigation div:hover a { color: var(--text); }
+
+/* left game menu */
+#game-navigation .current-date, #game-navigation .navigation, #game-navigation ul, #game-navigation > div {
+  background: var(--panel) !important; border: 1px solid var(--line) !important; border-radius: var(--radius) !important; box-shadow: none !important; }
+#game-navigation a { color: var(--muted); display: inline-block; padding: 1px 0; }
+#game-navigation a:hover { color: var(--text); }
+
+/* resource bar */
+#resource-bar { border-spacing: 4px 4px; }
+#resource-bar thead th { background: transparent !important; color: var(--faint); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+#resource-bar tbody th, #resource-bar tbody td { background: var(--panel) !important; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+
+/* page tabs */
+.game-header h1 { border-radius: 8px 8px 0 0 !important; box-shadow: none !important; font-weight: 500; }
+.game-header a h1 { background: var(--panel) !important; color: var(--muted) !important; }
+.game-header a h1:hover { background: var(--panel-2) !important; color: var(--text) !important; box-shadow: none !important; }
+
+/* content panel */
+.game-content { background: var(--panel) !important; border: 1px solid var(--line) !important; border-radius: 0 var(--radius) var(--radius) var(--radius) !important; }
+.game-content h2 { background: transparent !important; color: var(--text); font-size: 15px; font-weight: 600; text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.game-content thead th { background: var(--panel-2) !important; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.game-content tbody th { color: var(--muted); font-weight: 500; }
+.game-content tbody tr:nth-child(even), .game-content form tbody tr:nth-child(even) { background: rgba(255,255,255,.025) !important; }
+.game-content td, .game-content th { border-color: var(--line-soft) !important; font-variant-numeric: tabular-nums; }
+.game-content form, .game-content form.change-kingdom, .game-content div.preference-box { background: transparent !important; }
+
+/* forms */
+form input[type=text], form input[type=number], form input[type=password], form textarea, select {
+  background: var(--bg) !important; color: var(--text) !important; border: 1px solid var(--line) !important; border-radius: 6px !important; height: auto !important; padding: 4px 8px !important; }
+form input[type=submit], .button-link { background: var(--accent) !important; color: #fff !important; border: 0 !important; border-radius: 6px !important; padding: 5px 12px !important; font-weight: 600; cursor: pointer; }
+form input[type=submit]:hover, .button-link:hover { background: #7aafff !important; }
+
+/* messages and status colours */
+.good { color: var(--good); } .bad { color: var(--bad); }
+.message { border: 1px solid var(--line) !important; border-radius: 8px; font-weight: 500; }
+.good.message { background: rgba(76,195,138,.12) !important; color: var(--text) !important; border-color: rgba(76,195,138,.4) !important; }
+.bad.message { background: rgba(240,113,120,.12) !important; color: var(--text) !important; border-color: rgba(240,113,120,.4) !important; }
+.info.message { background: rgba(227,179,65,.12) !important; color: var(--text) !important; border-color: rgba(227,179,65,.4) !important; }
+#footer { color: var(--faint); }
+
+/* chat widget and the intel bot bar (outside the classic theme, inline-styled white) */
+#ircchat { background: var(--panel) !important; color: var(--text) !important; border: 1px solid var(--line) !important; border-radius: var(--radius); }
+#ircchat table, #ircchat td, #ircchat th { background: transparent !important; color: var(--text) !important; border-color: var(--line-soft) !important; }
+#ircchat input, #overlay input[type=text], #overlay input:not([type]) { background: var(--bg) !important; color: var(--text) !important; border: 1px solid var(--line) !important; border-radius: 6px; }
+#overlay { background: var(--panel-2) !important; color: var(--muted) !important; border: 1px solid var(--line) !important; border-radius: 8px; }
+#overlay button, #overlay input[type=button], #overlay input[type=submit] { background: var(--panel) !important; color: var(--text) !important; border: 1px solid var(--line) !important; border-radius: 6px; }
+
+/* intel-script buttons in the left menu */
+#game-navigation button, #game-navigation input[type=button], #game-navigation input[type=submit] {
+  background: var(--panel-2) !important; color: var(--text) !important; border: 1px solid var(--line) !important; border-radius: 6px !important; padding: 2px 8px !important; cursor: pointer; }
+#game-navigation button:hover, #game-navigation input[type=button]:hover { border-color: var(--accent) !important; }
+
+/* dropdowns drawn by the uniform.js plugin (image sprites in uniform.default.css) */
+div.selector, div.selector.hover, div.selector.focus, div.selector.active {
+  background: var(--bg) !important; border: 1px solid var(--line) !important; border-radius: 6px !important; height: auto !important; min-height: 26px; }
+div.selector span, div.selector.hover span, div.selector.focus span, div.selector.active span {
+  background: none !important; color: var(--text) !important; height: 26px !important; line-height: 26px !important; padding: 0 26px 0 8px !important; }
+div.selector::after { content: "▾"; position: absolute; right: 8px; top: 4px; color: var(--muted); pointer-events: none; }
+div.selector { position: relative; }
+div.selector:hover { border-color: var(--accent) !important; }
+#overlay table, #overlay tr, #overlay td, #overlay th { background: transparent !important; color: var(--text) !important; }
+
+/* native controls: dark dropdown lists, scrollbars and form widgets */
+:root { color-scheme: dark; }
+select option, select optgroup { background: var(--panel) !important; color: var(--text) !important; }
+select option:checked { background: var(--accent) !important; color: #fff !important; }
+/* a wrapper that itself holds a dropdown (the intel script's saved-builds box on Growth) is not drawn as one */
+div.selector:has(> div.selector), #build_select_container {
+  background: none !important; border: 0 !important; min-height: 0 !important; padding: 0 !important; }
+div.selector:has(> div.selector)::after, #build_select_container::after { content: none !important; }

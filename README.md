@@ -25,3 +25,9 @@ width-based media queries never see the phone. The responsive layer at the end o
 fluid at every size, and on a touch device with a small screen (`pointer: coarse` and `max-device-width: 480px`)
 enlarges the page with `zoom: 2.4`, so the 980px canvas behaves like a ~410px phone layout: header links wrap,
 the menu becomes rows of links, and the resource bar and wide tables scroll sideways inside their panels.
+
+## Changing it
+
+Edit the files in `src/` and run `./build.sh`; it writes `theme.css` and checks that every image it
+references exists. `src/classic.css` is the game's own classic theme: refresh it from
+`https://utopia-game.com/wol/static/<version>/common/css/classic_theme/theme.css` when the game updates it.

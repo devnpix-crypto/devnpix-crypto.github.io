@@ -1,6 +1,6 @@
 /*
  * Slate: a modern dark theme for Utopia (utopia-game.com), with a phone layout.
- * Base: the live classic_theme/theme.css (game version v663ea52), followed by the Slate layer and the responsive layer.
+ * Built by build.sh from src/: the live classic theme, then the Slate layer, then the responsive layer.
  * Licence: GPL-2.0, as the official template utopia-theme-default.github.io.
  */
 
@@ -1272,6 +1272,10 @@ div.selector:hover { border-color: var(--accent) !important; }
 :root { color-scheme: dark; }
 select option, select optgroup { background: var(--panel) !important; color: var(--text) !important; }
 select option:checked { background: var(--accent) !important; color: #fff !important; }
+/* a wrapper that itself holds a dropdown (the intel script's saved-builds box on Growth) is not drawn as one */
+div.selector:has(> div.selector), #build_select_container {
+  background: none !important; border: 0 !important; min-height: 0 !important; padding: 0 !important; }
+div.selector:has(> div.selector)::after, #build_select_container::after { content: none !important; }
 
 
 /* ===== Slate: fluid layout and phones =====
