@@ -35,7 +35,7 @@ h1, h2, h3 { color: var(--text); font-weight: 600; }
 
 /* content panel */
 .game-content { background: var(--panel) !important; border: 1px solid var(--line) !important; border-radius: 0 var(--radius) var(--radius) var(--radius) !important; }
-.game-content h2 { background: transparent !important; color: var(--text); font-size: 15px; font-weight: 600; text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.game-content h2 { background: transparent !important; color: var(--text); font-size: 15px; font-weight: 600; text-align: center; padding: 8px 12px; border-bottom: 1px solid var(--line); }
 .game-content thead th { background: var(--panel-2) !important; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
 .game-content tbody th { color: var(--muted); font-weight: 500; }
 .game-content tbody tr:nth-child(even), .game-content form tbody tr:nth-child(even) { background: rgba(255,255,255,.025) !important; }
