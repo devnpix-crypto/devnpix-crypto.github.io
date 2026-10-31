@@ -1224,7 +1224,9 @@ h1, h2, h3 { color: var(--text); font-weight: 600; }
 .game-header a h1:hover { background: var(--panel-2) !important; color: var(--text) !important; box-shadow: none !important; }
 
 /* content panel */
-.game-content { background: var(--panel) !important; border: 1px solid var(--line) !important; border-radius: 0 var(--radius) var(--radius) var(--radius) !important; }
+.game-content { background: var(--panel); border: 1px solid var(--line) !important; border-radius: 0 var(--radius) var(--radius) var(--radius) !important; }
+/* the game tints the page with an inline background when a kingdom is at war or in its post-war ceasefire: let it show */
+.game-content[style*="background"] { border-color: rgba(240,50,50,.55) !important; }
 .game-content h2 { background: transparent !important; color: var(--text); font-size: 15px; font-weight: 600; text-align: center; padding: 8px 12px; border-bottom: 1px solid var(--line); }
 .game-content thead th { background: var(--panel-2) !important; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
 .game-content tbody th { color: var(--muted); font-weight: 500; }
