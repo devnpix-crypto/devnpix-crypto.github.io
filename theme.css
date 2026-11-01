@@ -1278,6 +1278,8 @@ select option:checked { background: var(--accent) !important; color: #fff !impor
 div.selector:has(> div.selector), #build_select_container {
   background: none !important; border: 0 !important; min-height: 0 !important; padding: 0 !important; }
 div.selector:has(> div.selector)::after, #build_select_container::after { content: none !important; }
+/* the bookmark star would otherwise overlap the kingdom number input */
+#bookmark-header { left: -20px; }
 
 
 /* ===== Slate: fluid layout and phones =====
